@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service PriceFetcher {
+  rpc GetPrice (PriceRequest) returns (PriceResponse) {};
+}
+
+message PriceRequest {
+  string symbol = 1;
+}
+
+message PriceResponse {
+  string symbol = 1;
+  float price = 2;
+}
